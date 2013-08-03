@@ -1,0 +1,38 @@
+Version: 1.0
+
+- Pilot Framework 1.0
+
+    * Criação da estrutura e base do framework
+
+    * Implementação do módulo de exemplo
+
+
+- Pilot Framework 1.1
+
+    * Restruturação do Framework
+
+    * Implementação da captura dos parâmetros
+
+    * Implementação do Doctrine
+
+
+- Pilot Framework 1.2
+
+    * Implementação do Helper de email
+
+    * Implementação do método Init na controller
+
+
+- Pilot Framework 1.3
+
+    * Reestruturação dos arquivos index.php e base.php
+
+- Pilot Framework 1.4
+
+    * Retirada do Doctrine
+
+    * Inclusão do model base para conexão com banco
+
+- Pilot Framework 1.5
+
+    * Implementação do Helper de upload

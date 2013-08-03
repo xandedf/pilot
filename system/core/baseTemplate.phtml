@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><?php echo $this->getTitle(); ?></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="/web/css/default.css" rel=stylesheet type=text/css>
+        <?php $this->getCSS(); ?>
+        <?php $this->getCSSLibs(); ?>
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+        <?php $this->getJSLibs(); ?>
+        <?php $this->getJS(); ?>
+    </head>
+    <body>
+        <div id="header"><?php $this->getHeader($vars); ?></div>
+        <div id="content"><?php $this->getTemplate($vars); ?></div>
+        <div id="footer"><?php $this->getFooter($vars); ?></div>
+    </body>
+</html>
