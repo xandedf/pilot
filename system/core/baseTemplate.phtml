@@ -4,17 +4,40 @@
     <head>
         <title><?php echo $this->getTitle(); ?></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="/web/css/default.css" rel=stylesheet type=text/css>
-        <?php $this->getCSS(); ?>
+        <meta name="description" content="Pilot Framework, php, HTML5, MVC, Developer">
+        <meta name="author" content="Alexandre Gomes">
+        <link id="bs-css" href="/libs/bootstrap/css/bootstrap-classic.css" rel="stylesheet">
+	<link href="/libs/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="/libs/bootstrap/css/charisma-app.css" rel="stylesheet">
+	<link href="/libs/bootstrap/css/jquery-ui-1.8.21.custom.css" rel="stylesheet">
+	<link href='/libs/bootstrap/css/fullcalendar.css' rel='stylesheet'>
+	<link href='/libs/bootstrap/css/fullcalendar.print.css' rel='stylesheet'  media='print'>
+	<link href='/libs/bootstrap/css/chosen.css' rel='stylesheet'>
+	<link href='/libs/bootstrap/css/uniform.default.css' rel='stylesheet'>
+	<link href='/libs/bootstrap/css/colorbox.css' rel='stylesheet'>
+	<link href='/libs/bootstrap/css/jquery.cleditor.css' rel='stylesheet'>
+	<link href='/libs/bootstrap/css/jquery.noty.css' rel='stylesheet'>
+	<link href='/libs/bootstrap/css/noty_theme_default.css' rel='stylesheet'>
+	<link href='/libs/bootstrap/css/elfinder.min.css' rel='stylesheet'>
+	<link href='/libs/bootstrap/css/elfinder.theme.css' rel='stylesheet'>
+	<link href='/libs/bootstrap/css/jquery.iphone.toggle.css' rel='stylesheet'>
+	<link href='/libs/bootstrap/css/opa-icons.css' rel='stylesheet'>
+	<link href='/libs/bootstrap/css/uploadify.css' rel='stylesheet'>
         <?php $this->getCSSLibs(); ?>
+        <?php $this->getCSS(); ?>
         <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
-        <?php $this->getJSLibs(); ?>
-        <?php $this->getJS(); ?>
     </head>
     <body>
         <div id="header"><?php $this->getHeader($vars); ?></div>
         <div id="content"><?php $this->getTemplate($vars); ?></div>
         <div id="footer"><?php $this->getFooter($vars); ?></div>
     </body>
+    <script src="/libs/bootstrap/js/jquery.cookie.js"></script>
+    <script src="/libs/bootstrap/js/jquery.noty.js"></script>
+    <script src="/libs/bootstrap/js/bootstrap-button.js"></script>
+    <script src='/libs/bootstrap/js/jquery.dataTables.min.js'></script>
+    <script src="/libs/bootstrap/js/default.js"></script>
+    <?php $this->getJSLibs(); ?>
+    <?php $this->getJS(); ?>
 </html>

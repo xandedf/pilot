@@ -1,11 +1,15 @@
-<?php
-
-echo $this->getModule() . ' > ';
-echo $this->getController() . ' > ';
-echo $this->getAction();
-
-$breadcrumb = new breadcrumb;
-$breadcrumb->hideFileExt = true;
-echo '<p>'.$breadcrumb->show_breadcrumb().'</p>';
-
-?>
+<p></p>
+<div class="span12">
+    <ul class="breadcrumb">
+        <i class="icon icon-color icon-arrowthick-ne"></i>
+        <li>  
+          <a href="#"><?php echo $this->getModule(); ?></a> <span class="divider">></span>  
+        </li>
+        <li>  
+          <a href="#"><?php echo $this->getController(); ?></a> <span class="divider">></span>  
+        </li>
+        <li>  
+          <a href="#" class="active"><?php echo $this->getAction(); ?></a></span>  
+        </li>
+    </ul>
+</div>

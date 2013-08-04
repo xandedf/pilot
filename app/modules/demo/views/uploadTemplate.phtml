@@ -1,14 +1,3 @@
-<?php
-
-echo 'Módulo: ' . $this->getModule() . '<br /><br />';
-echo 'Controller: ' . $this->getController() . '<br /><br />';
-echo 'Action: ' . $this->getAction() . '<br /><br />';
-
-$breadcrumb = new breadcrumb;
-$breadcrumb->hideFileExt = true;
-echo '<p>'.$breadcrumb->show_breadcrumb().'</p>'
-
-?>
 
 <form enctype="multipart/form-data" action="/demo/upload/uploadPost" method="POST">
     
@@ -16,8 +5,4 @@ echo '<p>'.$breadcrumb->show_breadcrumb().'</p>'
     <input type="submit">
     
 </form>
-
-<?php
-echo '<br />' . LICENSE;
-?>
 

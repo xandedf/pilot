@@ -1,4 +1,51 @@
-<table class="testegrid" style="display: none"></table>
-<?php
-    echo $__grid;
-?>
+<div class="span12">
+
+<div class="row-fluid sortable ui-sortable">
+    <div class="box span12">
+        <div class="box-header well" data-original-title>
+            <h2><i class="icon-th"></i> Pedidos</h2>
+            <div class="box-icon">
+                <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+                <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+                <a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+            </div>
+        </div>
+        <div class="box-content">
+            <table class="table table-striped table-bordered bootstrap-datatable datatable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Telefone</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <?php
+                    
+                    foreach ($__list as $key => $values) {
+                    ?>
+                    <tr>
+                        <td><?php echo $values['id']?></td>
+                        <td class="center"><?php echo $values['name']?></td>
+                        <td class="center"><?php echo $values['email']?></td>
+                        <td class="center">
+                            <span class="label label-success"><?php echo $values['telefone']?></span>
+                        </td>
+                        <td class="center">
+                            <button class="btn btn-primary noty" data-noty-options='{"text":"Teste de informação","layout":"topCenter","type":"success"}'><i class="icon-bell icon-white"></i> Top Full Width</button>
+                        </td>
+                    </tr>
+                    <?php
+                    }
+                    ?>
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+</div>
+    
+</div>

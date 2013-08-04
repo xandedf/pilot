@@ -8,14 +8,11 @@ class indexController extends controllerGrid {
         $this->setTitle('Página de Exemplos');
         $this->setFooter('footer');
         $this->setHeader('header');
-        $this->setCSS('padrao.css');
-        $this->setCSS('footer/footer.css');
     }
 
 
     public function indexAction() {
 
-        $this->setCSS('index.css');
         $this->setJS('teste.js');
         
         $customer = new customerModel();
@@ -55,6 +52,10 @@ class indexController extends controllerGrid {
     }
     
     public function gridAction() {
+        
+        $customer = new customerModel();
+        
+        $dados['list'] = $customer->find()->getArrayResult();
         
         $grid = new Grid('testegrid');
         $grid->setColumn('id', 'id', 100)
