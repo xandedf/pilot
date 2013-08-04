@@ -36,3 +36,9 @@ Version: 1.0
 - Pilot Framework 1.5
 
     * Implementação do Helper de upload
+
+- Pilot Framework 1.6
+
+    * Implantação do Bootstrap para base CSS e layouts
+
+    * Melhorias nos exemplos e correções de bugs
