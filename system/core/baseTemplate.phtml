@@ -29,15 +29,17 @@
         <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
     </head>
     <body>
-        <div id="header"><?php $this->getHeader($vars); ?></div>
-        <div id="content"><?php $this->getTemplate($vars); ?></div>
-        <div id="footer"><?php $this->getFooter($vars); ?></div>
+        <div id="wrap">
+            <div class="container">
+                <div id="header" class="row"><?php $this->getHeader($vars); ?></div>
+                <div id="content" class="row"><?php $this->getTemplate($vars); ?></div>
+                <div id="footer" class="row"><?php $this->getFooter($vars); ?></div>
+            </div>
+        </div>
     </body>
+    <?php $this->getJSLibs(); ?>
     <script src="/libs/bootstrap/js/jquery.cookie.js"></script>
     <script src="/libs/bootstrap/js/jquery.noty.js"></script>
-    <script src="/libs/bootstrap/js/bootstrap-button.js"></script>
-    <script src='/libs/bootstrap/js/jquery.dataTables.min.js'></script>
     <script src="/libs/bootstrap/js/default.js"></script>
-    <?php $this->getJSLibs(); ?>
     <?php $this->getJS(); ?>
 </html>
