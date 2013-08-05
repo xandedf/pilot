@@ -58,16 +58,12 @@ class indexController extends controllerGrid {
         $dados['list'] = $customer->find()->getArrayResult();
         
         $grid = new Grid('testegrid');
-        $grid->setColumn('id', 'id', 100)
-             ->setColumn('teste2', 'teste2', 150)
-             ->setColumn('teste3', 'teste3', 150)
-            //->setButton('button', Grid::GRID_BUTTON_ADD, 'teste')
-            ->setSearchItens('id', 'id')
-            ->setSearchItens('teste', 'teste')
-            ->setSortorder('desc')
-            ->setUrl('json.php')
-            ->setTitle('Grid Teste Teste')
-            ->setSortname('teste');
+        $grid->setColumn('ID', 'id')
+             ->setColumn('Nome', 'name', "class='center'")
+             ->setColumn('E-Mail', 'email', "class='center'")
+             ->setColumn('Telefone', 'telefone', "class='center'")
+             ->setList($dados['list'])
+             ->setTitle('Grid Teste');
         $grid = $grid->getGrid();
         
         $dados['grid'] = $grid;
