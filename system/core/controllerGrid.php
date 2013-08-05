@@ -13,8 +13,7 @@ class controllerGrid extends Pilot_Core_Controller {
     
     public function init() {
         parent::init();
-        $this->setJSLibs('flexgrid/js/flexigrid.js');
-        $this->setCSSLibs('flexgrid/css/flexigrid.pack.css');
+        $this->setJSLibs('bootstrap/js/jquery.dataTables.min.js');
     }
     
 }

@@ -31,6 +31,7 @@ class Grid extends Pilot_Lib {
     private $width = 700;
     private $height = 370;
     private $singleSelect = false;
+    private $list = null;
 
 
     public function __construct($gridName = null) {
@@ -71,6 +72,17 @@ class Grid extends Pilot_Lib {
      */
     public function setTitle($value) {
         $this->title = $value;
+        return $this;
+    }
+    
+    /**
+     * Método que seta o array de resultados na grid
+     * 
+     * @param string $value
+     * @return \Pilot_Widget_Grid
+     */
+    public function setList($value) {
+        $this->list = $value;
         return $this;
     }
     
@@ -154,8 +166,8 @@ class Grid extends Pilot_Lib {
      * @param string $align
      * @return \Pilot_Widget_Grid
      */
-    public function setColumn($display, $name, $width, $sortable = true, $align = 'left') {
-        $this->columns[] = "{display: '{$display}', name: '{$name}', width: {$width}, sortable: {$sortable}, align: '$align'}";
+    public function setColumn($display, $index, $options = "") {
+        $this->columns[] = array('name' => $display, 'index' => $index, 'options' => $options);
         return $this;
     }
     
@@ -253,16 +265,7 @@ class Grid extends Pilot_Lib {
             throw new Exception(self::___(self::MSG_ERRO_COLUMNS_GRID, $this->flexigrid), self::MSG_ERRO_COLUMNS_GRID_COD);
         }
         
-        $columns = '';
-        foreach ($this->columns as $value) {
-            $columns .= $value . ',';
-        }
-        
-        $columns = substr($columns,0,-1);
-        $columns = "colModel: [ {$columns} ],";
-        
-        return $columns;
-        
+        return $this->columns;
     }
     
     /**
@@ -307,7 +310,69 @@ class Grid extends Pilot_Lib {
         return $search;
     }
     
-    public function getGrid() {
+    public function getGrid($list = null) {
+        
+        try {
+            
+            if (is_null($list)) {
+                $list = $this->list;
+            }
+            
+            $columns = $this->getColumns();
+            
+            $grid = "
+                    <div class='row-fluid sortable ui-sortable'>
+                        <div class='box span12'>
+                            <div class='box-header well' data-original-title>
+                                <h2><i class='icon-th'></i> {$this->title}</h2>
+                                <div class='box-icon'>
+                                    <a href='#' class='btn btn-setting btn-round'><i class='icon-cog'></i></a>
+                                    <a href='#' class='btn btn-minimize btn-round'><i class='icon-chevron-up'></i></a>
+                                    <a href='#' class='btn btn-close btn-round'><i class='icon-remove'></i></a>
+                                </div>
+                            </div>
+                            <div class='box-content'>
+                                <table class='table table-striped table-bordered bootstrap-datatable datatable'>
+                                    <thead>
+                                        <tr>";
+                                            foreach ($columns as $values) {
+                                            $grid .= "<th>{$values['name']}</th>";
+                                            }
+                                        $grid .=
+                                            "<th>Ações</th>
+                                         </tr>
+                                    </thead>
+
+                                    <tbody>";
+                                        foreach ($list as $key => $values) {
+                                            $grid .=
+                                            "<tr>";
+                                                foreach ($columns as $column) {
+                                                    $grid .= "<td {$column['options']}>{$values[$column['index']]}</td>";
+                                                }
+                                                $grid .= "
+                                                <td class='center'>
+                                                    <button class='btn btn-primary noty' data-noty-options='{'text':'Teste de informação','layout':'topCenter','type':'success'}'><i class='icon-bell icon-white'></i> Top Full Width</button>
+                                                </td>
+                                            </tr>";
+                                        }
+                                    $grid .=
+                                    "</tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>";
+                                    
+            return $grid;
+            
+        } catch (Exception $exc) {
+            throw new Exception($exc->getMessage(), $exc->getCode());
+        }
+            
+    }
+    
+    public function getGrid_() {
         
         try {
             
