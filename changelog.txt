@@ -46,3 +46,7 @@ Version: 1.0
 - Pilot Framework 1.7
 
     * Melhorias na Grid
+
+- Pilot Framework 1.8
+
+    * Inclusão do logotipo novo do Framework

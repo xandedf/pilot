@@ -9,7 +9,7 @@
  * @author      Alexandre Gomes <alexandre.gomes@discover.com.br>
  */
 
-define('VERSION', '1.7');
+define('VERSION', '1.8');
 define('_NAME_', 'Pilot Framework');
 define('LICENSE' , _NAME_ . ' ' . VERSION . ' - Copyright&copy ' . date('Y'));
 define('__NAME__', 'pilot');
