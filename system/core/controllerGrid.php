@@ -4,7 +4,7 @@
  * Classe padrão de controller com Grid
  *
  * @package     Pilot
- * @copyright   Copyright (c) 2013 Discover (http://www.discover.com.br) 
+ * @copyright   Copyright (c) 2013 ARG Softwares (http://www.argsoftwares.com.br) 
  * @license     Commercial
  * @author      Alexandre Gomes <alexandre.gomes@discover.com.br>
  */

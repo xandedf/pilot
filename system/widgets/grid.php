@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Classe de widget de grid (FlexiGrid)
+ * Classe de widget de grid (Bootstrap)
  *
  * @package     Pilot
  * @author      Alexandre Gomes <alexandre.gomes@discover.com.br>
@@ -289,26 +289,6 @@ class Grid extends Pilot_Lib {
         return $buttons;
     }
     
-    /**
-     * Método que retorna a string com os seach itens para a Grid
-     * 
-     * @return string
-     */
-    public function getSearchItens() {
-        if (count($this->searchItens) == 0) {
-            return '';
-        }
-        
-        $search = '';
-        foreach ($this->searchItens as $value) {
-            $search .= $value . ',';
-        }
-        
-        $search = substr($search,0,-1);
-        $search = "searchitems: [ {$search} ],";
-        
-        return $search;
-    }
     
     public function getGrid($list = null) {
         

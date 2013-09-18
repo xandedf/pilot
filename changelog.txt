@@ -42,3 +42,7 @@ Version: 1.0
     * Implantação do Bootstrap para base CSS e layouts
 
     * Melhorias nos exemplos e correções de bugs
+
+- Pilot Framework 1.7
+
+    * Melhorias na Grid
