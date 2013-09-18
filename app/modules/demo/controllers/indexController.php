@@ -12,8 +12,6 @@ class indexController extends controllerGrid {
 
 
     public function indexAction() {
-
-        $this->setJS('teste.js');
         
         $customer = new customerModel();
         

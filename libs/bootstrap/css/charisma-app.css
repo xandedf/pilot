@@ -1,4 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Shojumaru);
+
+@font-face {
+  font-family: 'Shojumaru';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Shojumaru'), local('Shojumaru-Regular'), url(https://themes.googleusercontent.com/static/fonts/shojumaru/v1/pYVcIM206l3F7GUKEvtB3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
 
 select{
 background-color:#fff;

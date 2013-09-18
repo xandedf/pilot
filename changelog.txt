@@ -50,3 +50,7 @@ Version: 1.0
 - Pilot Framework 1.8
 
     * Inclusão do logotipo novo do Framework
+
+- Pilot Framework 1.9
+
+    * Melhorias de performance baseado no PageSpeed do Google

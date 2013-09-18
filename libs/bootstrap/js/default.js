@@ -16,7 +16,7 @@ $(document).ready(function(){
 	});
         
 	function switch_theme(theme_name) {
-            $('#bs-css').attr('href','/libs/bootstrap/css/bootstrap-'+theme_name+'.css');
+            $('#bs-css').attr('href','/libs/bootstrap/css/bootstrap-'+theme_name+'.min.css');
 	}
         
         docReady();
