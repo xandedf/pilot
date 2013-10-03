@@ -54,3 +54,7 @@ Version: 1.0
 - Pilot Framework 1.9
 
     * Melhorias de performance baseado no PageSpeed do Google
+
+- Pilot Framework 1.10
+
+    * Inclusão e compressão dos arquivos do JQuery e JQueryUI para melhoria de performance
