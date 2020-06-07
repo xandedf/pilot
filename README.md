@@ -1,4 +1,4 @@
-![](https://img.shields.io/github/stars/xandedf/ecoleta) ![](https://img.shields.io/github/forks/xandedf/pilot) ![](https://img.shields.io/github/tag/xandedf/ecoleta) ![](https://img.shields.io/github/release/xandedf/pilot) ![](https://img.shields.io/github/issues/xandedf/ecoleta) ![](https://img.shields.io/github/repo-size/xandedf/pilot)
+![](https://img.shields.io/github/stars/xandedf/pilot) ![](https://img.shields.io/github/forks/xandedf/pilot) ![](https://img.shields.io/github/tag/xandedf/pilot) ![](https://img.shields.io/github/release/xandedf/pilot) ![](https://img.shields.io/github/issues/xandedf/pilot) ![](https://img.shields.io/github/repo-size/xandedf/pilot)
 ![GitHub](https://img.shields.io/github/license/xandedf/pilot)
 ![](https://img.shields.io/github/commit-activity/w/xandedf/pilot)
 
